@@ -54,7 +54,7 @@
 (eval-when-compile (require 'cl))
 
 (require 'thingatpt)
-(require 'ansi-color)
+(require 'markdown-mode)
 
 (defgroup yari nil
   "Yet Another Ri Interface."
@@ -125,7 +125,6 @@
         (with-current-buffer yari-buffer
           (erase-buffer)
           (insert ri-content)
-          (ansi-color-apply-on-region (point-min) (point-max))
           (goto-char (point-min))
           (yari-mode))))
     (display-buffer yari-buffer-name)))
